@@ -1,6 +1,6 @@
 {
   "name": "backend",
-  "root": "backend/supabase",
+  "root": "apps/supabase",
   "projectType": "application",
   "targets": {
     "start": {

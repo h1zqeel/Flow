@@ -1,7 +1,7 @@
 {
   "projects": {
-    "frontend": "apps/flow-ui",
-    "backend": "backend"
+    "expo-app": "apps/expo",
+    "supabase-functions": "apps/supabase"
   },
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {

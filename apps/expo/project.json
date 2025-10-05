@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "root": "apps/flow-ui",
+  "root": "apps/expo",
   "projectType": "application",
   "targets": {
     "start": {
