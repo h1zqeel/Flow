@@ -1,12 +1,13 @@
-
-import { Box } from '@/components/ui/box';
-import { Text } from '@react-navigation/elements';
+import { Box } from "@/components/ui/box";
+import { Text } from "@react-navigation/elements";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function TabTwoScreen() {
   return (
-		<Box className="background-red-500 flex-1 justify-center items-center">
-			<Text>keesi</Text>
-		</Box>
+    <SafeAreaView className="flex-1 bg-background">
+      <Box className=" flex-1 justify-center items-center">
+        <Text>Test</Text>
+      </Box>
+    </SafeAreaView>
   );
 }
-
