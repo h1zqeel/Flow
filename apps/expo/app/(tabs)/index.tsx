@@ -56,7 +56,7 @@ export default function HomeScreen() {
           <Card className="bg-secondary border border-white/5 rounded-2xl p-5">
             <Text className="text-primary text-sm mb-1">✨ AI Insight</Text>
             <Text className="text-text/80">
-              Great job Rahul! You’ve saved 20% more than last month.
+              idk some insight here
             </Text>
           </Card>
 
