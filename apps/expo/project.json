@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "expo",
   "root": "apps/expo",
   "projectType": "application",
   "targets": {

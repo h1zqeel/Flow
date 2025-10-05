@@ -1,7 +1,7 @@
 {
   "projects": {
-    "expo-app": "apps/expo",
-    "supabase-functions": "apps/supabase"
+    "expo": "apps/expo",
+    "supabase": "apps/supabase"
   },
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
