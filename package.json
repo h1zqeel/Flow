@@ -1,0 +1,23 @@
+{
+  "name": "@flow/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "dependencies": {
+    "create-nx": "0.0.0",
+    "expo": "~50.0.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.73.2"
+  },
+  "devDependencies": {
+    "@expo/cli": "~0.16.5",
+    "@nx/eslint": "18.0.1",
+    "@nx/expo": "18.0.1",
+    "@nx/react-native": "18.0.1",
+    "@nx/workspace": "18.0.1",
+    "eslint": "~8.48.0",
+    "nx": "18.0.1"
+  }
+}

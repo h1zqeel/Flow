@@ -1,0 +1,13 @@
+{
+  "name": "backend",
+  "root": "backend/supabase",
+  "projectType": "application",
+  "targets": {
+    "start": {
+      "command": "npx supabase start"
+    },
+    "deploy": {
+      "command": "npx supabase functions deploy"
+    }
+  }
+}

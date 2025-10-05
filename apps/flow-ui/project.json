@@ -1,0 +1,13 @@
+{
+  "name": "frontend",
+  "root": "apps/flow-ui",
+  "projectType": "application",
+  "targets": {
+    "start": {
+      "command": "npx expo start"
+    },
+    "build": {
+      "command": "npx expo export"
+    }
+  }
+}
