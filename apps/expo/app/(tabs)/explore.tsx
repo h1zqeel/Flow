@@ -6,7 +6,7 @@ export default function TabTwoScreen() {
   return (
     <SafeAreaView className="flex-1 bg-background">
       <Box className=" flex-1 justify-center items-center">
-        <Text>Test</Text>
+        <Text>Second Page</Text>
       </Box>
     </SafeAreaView>
   );
