@@ -1,17 +1,17 @@
-import { Tabs } from "expo-router";
-import React, { useEffect, useRef } from "react";
-import { Pressable, Animated, Easing } from "react-native";
-import { IconSymbol } from "@/components/ui/icon-symbol";
-import { FloatingTabBar } from "@/components/ui/floating-tab-bar";
+import { NativeTabs, Icon, Label } from "expo-router/unstable-native-tabs";
+import React from "react";
 
 export default function TabLayout() {
   return (
-    <Tabs
-      tabBar={(props) => <FloatingTabBar {...props} />}
-      screenOptions={{ headerShown: false }}
-    >
-      <Tabs.Screen name="index" options={{ title: "Home" }} />
-      <Tabs.Screen name="explore" options={{ title: "Explore" }} />
-    </Tabs>
+    <NativeTabs minimizeBehavior="automatic">
+      <NativeTabs.Trigger name="index">
+        <Label>Home</Label>
+        <Icon sf="house.fill" />
+      </NativeTabs.Trigger>
+      <NativeTabs.Trigger name="explore">
+        <Label>Explore</Label>
+        <Icon sf="paperplane.fill" />
+      </NativeTabs.Trigger>
+    </NativeTabs>
   );
 }

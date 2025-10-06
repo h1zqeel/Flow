@@ -7,7 +7,6 @@ import { VStack } from "@/components/ui/vstack";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ScrollView, View } from "react-native";
 import { IconSymbol } from "@/components/ui/icon-symbol";
-
 export default function HomeScreen() {
   const transactions = [
     {
@@ -18,12 +17,112 @@ export default function HomeScreen() {
       type: "expense",
       icon: "fork.knife" as any,
       color: "bg-[#E35B1F]/20 text-[#E35B1F]",
-    }
+    },
+    {
+      id: 2,
+      title: "Test",
+      date: "Today, 12:30 AM",
+      amount: "-$89.69",
+      type: "expense",
+      icon: "fork.knife" as any,
+      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
+    },
+    {
+      id: 3,
+      title: "Test",
+      date: "Today, 12:30 AM",
+      amount: "-$89.69",
+      type: "expense",
+      icon: "fork.knife" as any,
+      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
+    },
+    {
+      id: 4,
+      title: "Test",
+      date: "Today, 12:30 AM",
+      amount: "-$89.69",
+      type: "expense",
+      icon: "fork.knife" as any,
+      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
+    },
+    {
+      id: 5,
+      title: "Test",
+      date: "Today, 12:30 AM",
+      amount: "-$89.69",
+      type: "expense",
+      icon: "fork.knife" as any,
+      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
+    },
+    {
+      id: 6,
+      title: "Test",
+      date: "Today, 12:30 AM",
+      amount: "-$89.69",
+      type: "expense",
+      icon: "fork.knife" as any,
+      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
+    },
+    {
+      id: 7,
+      title: "Test",
+      date: "Today, 12:30 AM",
+      amount: "-$89.69",
+      type: "expense",
+      icon: "fork.knife" as any,
+      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
+    },
+    {
+      id: 8,
+      title: "Test",
+      date: "Today, 12:30 AM",
+      amount: "-$89.69",
+      type: "expense",
+      icon: "fork.knife" as any,
+      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
+    },
+    {
+      id: 9,
+      title: "Test",
+      date: "Today, 12:30 AM",
+      amount: "-$89.69",
+      type: "expense",
+      icon: "fork.knife" as any,
+      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
+    },
+    {
+      id: 10,
+      title: "Test",
+      date: "Today, 12:30 AM",
+      amount: "-$89.69",
+      type: "expense",
+      icon: "fork.knife" as any,
+      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
+    },
+    {
+      id: 11,
+      title: "Test",
+      date: "Today, 12:30 AM",
+      amount: "-$89.69",
+      type: "expense",
+      icon: "fork.knife" as any,
+      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
+    },
+    {
+      id: 12,
+      title: "Test",
+      date: "Today, 12:30 AM",
+      amount: "-$89.69",
+      type: "expense",
+      icon: "fork.knife" as any,
+      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
+    },
   ];
 
   return (
     <SafeAreaView className="flex-1 bg-background">
       <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingHorizontal: 20, paddingVertical: 30 }}
       >
@@ -55,9 +154,7 @@ export default function HomeScreen() {
 
           <Card className="bg-secondary border border-white/5 rounded-2xl p-5">
             <Text className="text-primary text-sm mb-1">✨ AI Insight</Text>
-            <Text className="text-text/80">
-              idk some insight here
-            </Text>
+            <Text className="text-text/80">idk some insight here</Text>
           </Card>
 
           <VStack className="gap-3">
