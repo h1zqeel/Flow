@@ -122,9 +122,8 @@ export default function HomeScreen() {
   return (
     <SafeAreaView className="flex-1 bg-background">
       <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingHorizontal: 20, paddingVertical: 30 }}
+        contentContainerStyle={{ paddingHorizontal: 5, paddingVertical: 0 }}
       >
         <VStack className="gap-6">
           <Box className="items-center mt-2">
