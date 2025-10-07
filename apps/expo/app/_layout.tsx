@@ -12,9 +12,22 @@ export const unstable_settings = {
 export default function RootLayout() {
   return (
     <GluestackUIProvider mode="dark">
-      <Stack>
+      <Stack screenOptions={{ headerBackButtonDisplayMode: "minimal" }}>
+        <Stack.Screen
+          name="expense/[id]"
+          options={{
+            title: "Expense Details",
+            headerBackTitle: "Expenses",
+            headerStyle: { backgroundColor: "#000" },
+            headerTintColor: "#fff",
+            headerTitleStyle: { fontWeight: "600" },
+          }}
+        />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
+        <Stack.Screen
+          name="modal"
+          options={{ presentation: "modal", title: "Modal" }}
+        />
       </Stack>
       <StatusBar style="auto" />
     </GluestackUIProvider>
