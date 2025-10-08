@@ -124,3 +124,8 @@ yarn-error.log
 # testing
 /coverage
 
+.temp
+
+.branches
+
+.env

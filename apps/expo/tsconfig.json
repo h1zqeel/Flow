@@ -6,6 +6,9 @@
       "@/*": [
         "./*"
       ],
+      "@/shared/*": [
+        "../../shared/*"
+      ],
       "tailwind.config": [
         "./tailwind.config.js"
       ]

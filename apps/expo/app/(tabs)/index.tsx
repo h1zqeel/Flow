@@ -7,117 +7,22 @@ import { VStack } from "@/components/ui/vstack";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ScrollView, View } from "react-native";
 import { IconSymbol } from "@/components/ui/icon-symbol";
+import { supabase } from "@/utils/supabase";
+import { Transaction } from "@/shared/database/types";
+import { useEffect, useState } from "react";
+
+
 export default function HomeScreen() {
-  const transactions = [
-    {
-      id: 1,
-      title: "Test",
-      date: "Today, 12:30 AM",
-      amount: "-$89.69",
-      type: "expense",
-      icon: "fork.knife" as any,
-      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
-    },
-    {
-      id: 2,
-      title: "Test",
-      date: "Today, 12:30 AM",
-      amount: "-$89.69",
-      type: "expense",
-      icon: "fork.knife" as any,
-      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
-    },
-    {
-      id: 3,
-      title: "Test",
-      date: "Today, 12:30 AM",
-      amount: "-$89.69",
-      type: "expense",
-      icon: "fork.knife" as any,
-      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
-    },
-    {
-      id: 4,
-      title: "Test",
-      date: "Today, 12:30 AM",
-      amount: "-$89.69",
-      type: "expense",
-      icon: "fork.knife" as any,
-      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
-    },
-    {
-      id: 5,
-      title: "Test",
-      date: "Today, 12:30 AM",
-      amount: "-$89.69",
-      type: "expense",
-      icon: "fork.knife" as any,
-      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
-    },
-    {
-      id: 6,
-      title: "Test",
-      date: "Today, 12:30 AM",
-      amount: "-$89.69",
-      type: "expense",
-      icon: "fork.knife" as any,
-      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
-    },
-    {
-      id: 7,
-      title: "Test",
-      date: "Today, 12:30 AM",
-      amount: "-$89.69",
-      type: "expense",
-      icon: "fork.knife" as any,
-      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
-    },
-    {
-      id: 8,
-      title: "Test",
-      date: "Today, 12:30 AM",
-      amount: "-$89.69",
-      type: "expense",
-      icon: "fork.knife" as any,
-      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
-    },
-    {
-      id: 9,
-      title: "Test",
-      date: "Today, 12:30 AM",
-      amount: "-$89.69",
-      type: "expense",
-      icon: "fork.knife" as any,
-      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
-    },
-    {
-      id: 10,
-      title: "Test",
-      date: "Today, 12:30 AM",
-      amount: "-$89.69",
-      type: "expense",
-      icon: "fork.knife" as any,
-      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
-    },
-    {
-      id: 11,
-      title: "Test",
-      date: "Today, 12:30 AM",
-      amount: "-$89.69",
-      type: "expense",
-      icon: "fork.knife" as any,
-      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
-    },
-    {
-      id: 12,
-      title: "Test",
-      date: "Today, 12:30 AM",
-      amount: "-$89.69",
-      type: "expense",
-      icon: "fork.knife" as any,
-      color: "bg-[#E35B1F]/20 text-[#E35B1F]",
-    },
-  ];
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
+
+  useEffect(() => {
+    fetchTransactions();
+  }, []);
+
+  const fetchTransactions = async () => {
+    const { data } = await supabase.from("transactions").select();
+      setTransactions(data as Transaction[]);
+  };
 
   return (
     <SafeAreaView className="flex-1 bg-background">
@@ -166,13 +71,11 @@ export default function HomeScreen() {
               >
                 <HStack className="items-center gap-3">
                   <View
-                    className={`w-10 h-10 rounded-full items-center justify-center ${
-                      tx.color.split(" ")[0]
-                    }`}
+                    className={`w-10 h-10 rounded-full items-center justify-center`}
                   >
                     <IconSymbol
-                      name={tx.icon}
-                      color={tx.color.split(" ")[1].replace("text-", "")}
+                      color="text-text/70"
+                      name="fork.knife"
                       size={20}
                     />
                   </View>
@@ -185,7 +88,7 @@ export default function HomeScreen() {
                 <VStack className="items-end">
                   <Text
                     className={`font-semibold ${
-                      tx.type === "income" ? "text-success" : "text-error"
+                      tx.amount > 0 ? "text-success" : "text-error"
                     }`}
                   >
                     {tx.amount}
